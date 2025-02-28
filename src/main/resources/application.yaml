@@ -1,0 +1,10 @@
+spring:
+
+  application:
+    name: Auth Service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/AuthDB
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
