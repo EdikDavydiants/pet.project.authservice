@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pet.project.authservice.dto.request.RegistrationDtoRequest;
 import pet.project.authservice.dto.response.RegistrationDtoResponse;
+import pet.project.authservice.dto.touserservice.request.RegistrationDtoUSRequest;
 import pet.project.authservice.service.RegistrationService;
 
 @RestController

@@ -43,7 +43,7 @@ public class AuthenticationService {
         HttpEntity<AuthenticationDtoUSRequest> usEntityRequest = new HttpEntity<>(usRequest);
 
         ResponseEntity<AuthenticationDtoUSResponse> usResponseEntity =
-                restTemplate.exchange(userServiceUrl, HttpMethod.POST, usEntityRequest, AuthenticationDtoUSResponse.class);
+                restTemplate.exchange(userServiceUrl + "/login", HttpMethod.POST, usEntityRequest, AuthenticationDtoUSResponse.class);
 
         if (usResponseEntity.getStatusCode().is2xxSuccessful()) {
             var usResponse = usResponseEntity.getBody();
