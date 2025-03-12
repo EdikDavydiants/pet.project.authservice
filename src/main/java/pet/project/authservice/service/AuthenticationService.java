@@ -49,7 +49,7 @@ public class AuthenticationService {
             var usResponse = usResponseEntity.getBody();
             String token = Jwts.builder()
                     .claims()
-                        .id(usResponse.id())
+                        .id(usResponse.id().toString())
                         .subject(request.username())
                         .issuedAt(new Date(System.currentTimeMillis()))
                         .expiration(new Date(System.currentTimeMillis() + TOKEN_LIFE_PERIOD_MS))
